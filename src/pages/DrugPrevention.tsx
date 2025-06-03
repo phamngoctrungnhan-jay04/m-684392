@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import AuthDialog from "@/components/AuthDialog";
 import { 
   BookOpen, 
   Users, 
@@ -16,7 +17,8 @@ import {
   TrendingUp,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  LogIn
 } from "lucide-react";
 
 export default function DrugPrevention() {
@@ -82,10 +84,14 @@ export default function DrugPrevention() {
                   để giúp cộng đồng phòng ngừa tệ nạn xã hội ma túy một cách hiệu quả.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    <BookOpen className="mr-2 h-5 w-5" />
-                    Tham gia khóa học
-                  </Button>
+                  <AuthDialog
+                    trigger={
+                      <Button size="lg" className="bg-primary hover:bg-primary/90">
+                        <LogIn className="mr-2 h-5 w-5" />
+                        Đăng nhập để tham gia
+                      </Button>
+                    }
+                  />
                   <Button variant="outline" size="lg">
                     <ClipboardList className="mr-2 h-5 w-5" />
                     Đánh giá nguy cơ
