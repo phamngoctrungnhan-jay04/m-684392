@@ -13,14 +13,14 @@ export default function Navbar() {
   const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Tạm thời dùng state local
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   
   const navLinks = [
-    { name: t.nav.home, path: "/" },
-    { name: t.nav.apartments, path: "/apartments" },
-    { name: t.nav.amenities, path: "/amenities" },
-    { name: t.nav.gallery, path: "/gallery" },
-    { name: t.nav.contact, path: "/contact" }
+    { name: "Trang chủ", path: "/" },
+    { name: "Xem các khóa học", path: "/apartments" },
+    { name: "Đánh giá nguy cơ", path: "/amenities" },
+    { name: "Sự kiện", path: "/gallery" },
+    { name: "Liên hệ", path: "/contact" }
   ];
 
   useEffect(() => {
@@ -88,7 +88,7 @@ export default function Navbar() {
                 }
               />
               <Button asChild className="btn-primary">
-                <Link to="/booking">{t.nav.bookNow}</Link>
+                <Link to="/booking">Đặt lịch tư vấn</Link>
               </Button>
             </div>
           )}
@@ -177,7 +177,7 @@ export default function Navbar() {
                   />
                   <Button asChild className="w-full btn-primary" size="lg">
                     <Link to="/booking" onClick={() => setMobileMenuOpen(false)}>
-                      {t.nav.bookNow}
+                      Đặt lịch tư vấn
                     </Link>
                   </Button>
                 </div>
