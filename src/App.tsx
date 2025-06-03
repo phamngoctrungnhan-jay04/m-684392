@@ -10,6 +10,7 @@ import BookingPage from "./pages/BookingPage";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Amenities from "./pages/Amenities";
+import DrugPrevention from "./pages/DrugPrevention";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
@@ -24,7 +25,8 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<DrugPrevention />} />
+            <Route path="/seaside" element={<Index />} />
             <Route path="/apartments" element={<Apartments />} />
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/gallery" element={<Gallery />} />
